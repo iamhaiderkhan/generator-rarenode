@@ -1,0 +1,52 @@
+{
+  "name": "generator-rarenode",
+  "version": "0.0.1",
+  "description": "Rarenode Yeoman generator for  MEAN / MERN  / MEVN  Application with Express / NodeJS / KrakensJs, Mongoose or Sequelize, Sockets.io (Optional), Angular or ReactJS or VueJS. (Optional).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamhaiderkhan/generator-rarenode.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "javascript",
+    "Angular",
+    "react.js",
+    "node.js",
+    "full",
+    "stack",
+    "mean",
+    "mern",
+    "mevn",
+    "mongoose",
+    "sequelize",
+    "rarenode",
+    "karaken.js",
+    "express",
+    "builder",
+    "generator",
+    "vue.js",
+    "node",
+    "angular",
+    "react",
+    "vue"
+  ],
+  "author": "Haider Khan <haiderkhan.live@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamhaiderkhan/generator-rarenode/issues"
+  },
+  "homepage": "https://github.com/iamhaiderkhan/generator-rarenode#readme",
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  },
+  "files": [
+    "app"
+  ],
+  "devDependencies": {
+    "lodash": "^4.17.11"
+  }
+}

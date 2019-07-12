@@ -1,0 +1,38 @@
+{
+  "specialization": {},
+  "middleware": {
+    "static": {
+      "module": {
+        "arguments": ["path:./.build"]
+      }
+    },
+    "router": {
+      "module": {
+        "arguments": [
+          {
+            "directory": "path:./app/controllers"
+          }
+        ]
+      }
+    },
+    "response-sender": {
+      "enabled": true,
+      "priority": 80,
+      "route": "/api",
+      "module": {
+        "name": "path:./app/lib/response/responseAppender"
+      }
+    },
+    "authentication": {
+      "enabled": true,
+      "priority": 100,
+      "route": "/api/*",
+      "module": {
+        "name": "path:./app/lib/auth"
+      }
+    }
+  },
+  "app": {
+    "url": ""
+  }
+}
