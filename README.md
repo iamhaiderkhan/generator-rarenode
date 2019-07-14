@@ -53,6 +53,16 @@ This generator is somewhat opinionated. You might be interested in knowing the f
 - It loads all the models on the variable `global.db`
 - While loading models, it converts snake cased file names found under `app/models` into camel case model name. For example, a file named `user_chats` will be available as `global.db.UserChats`
 
+- If you choose sequelize
+
+    - update you mysql username & password in config/database.js
+
+## Auth
+ - Authentication is implemented by defualt.
+ - If you want modification in rules just update the keys in `config/config.json` in `authentication` object. For example by defualt all users routes will be bypass with this regex.  `authentication.route:"\/api\/v1((?!$))((?!\/root\/))((?!\/users))*"`.
+ - If you want bypass some specific routes, For example  `users/login`, `users/sign-up`. just update the rules regex in `authentication.route:"\/api\/v1((?!$))((?!\/root\/))((?!\/users\/login))((?!\/users\/sign-up))*"`.
+
+
 ## Typescript Support
 
 - Coming Soon.
