@@ -26,13 +26,22 @@
     "authentication": {
       "enabled": true,
       "priority": 100,
-      "route": "/api/*",
+      "route": "\/api\/v1((?!$))((?!\/root\/))((?!\/users))*",
       "module": {
         "name": "path:./app/lib/auth"
+      }
+    },
+    "pagination": {
+      "enabled": true,
+      "priority": 100,
+      "route": "/api",
+      "module": {
+        "name": "path:./app/lib/middlewares/pagination"
       }
     }
   },
   "app": {
-    "url": ""
+    "url": "",
+    "jwtSecret": "<%= name %>"
   }
 }

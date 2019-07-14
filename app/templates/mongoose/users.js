@@ -1,21 +1,19 @@
-'use strict';
+'use strict'
+var mongoose_delete = require('mongoose-delete')
+var mongoose = require('mongoose')
 
-var mongoose = require('mongoose');
-
-var UsersModel = function() {
-
+var UsersModel = function () {
   var usersSchema = mongoose.Schema({
     email: String
-  }, {collection: 'Users'});
+  }, {collection: 'Users'})
 
-  usersSchema.statics.getUser = function(userId) {
-    return this.findOne({_id: userId}).then(function(user) {
-      return user;
-    });
-  };
+  usersSchema.statics.getUser = function (userId) {
+    return this.findOne({_id: userId}).then(function (user) {
+      return user
+    })
+  }
+  usersSchema.plugin(mongoose_delete)
+  return mongoose.model('Users', usersSchema)
+}
 
-  return mongoose.model('Users', usersSchema);
-  
-};
-
-module.exports = new UsersModel();
+module.exports = new UsersModel()

@@ -23,11 +23,18 @@ options = {
 app = module.exports = express()
 
 app.use(express.static(__dirname + '/public')) // set the static files location /public/img will be /img for users
-
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+  next()
+})
 global.db = require('./app/models/index')
 global.log = require('./app/lib/logger')
 global.appRoot = path.resolve(__dirname)
+global._ = require('lodash')
+global.moment = require('moment')
 global.asyncMiddleware = asyncMiddleware
+global.commonFunctions = require('./app/lib/middlewares/common')
 global.kraken = app.kraken
 app.use(kraken(options))
 app.on('start', function () {

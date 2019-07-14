@@ -15,7 +15,10 @@ module.exports = generators.Base.extend({
       'kraken-js',
       'construx',
       'construx-copier',
-      'eslint'
+      'eslint',
+      'crypto',
+      'jsonwebtoken',
+      'randomatic'
     ]
 
     var devInstall = [
@@ -29,6 +32,7 @@ module.exports = generators.Base.extend({
     switch (this.answers.db) {
       case 'mongoose':
         productionInstall.push('mongoose')
+        productionInstall.push('mongoose-delete')
         break
       case 'sequelize':
         productionInstall.push('mysql')
@@ -313,7 +317,8 @@ module.exports = generators.Base.extend({
 
       this.fs.copyTpl(
         this.templatePath('config/*'),
-        this.destinationPath('config/')
+        this.destinationPath('config/'),
+        this._getAnswers()
       )
 
       this.fs.copyTpl(
