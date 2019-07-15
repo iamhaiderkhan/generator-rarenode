@@ -1,6 +1,6 @@
 {
   "name": "generator-rarenode",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Rarenode Yeoman generator for  MEAN / MERN  / MEVN  Application with Express / NodeJS / KrakensJs, Mongoose or Sequelize, Sockets.io (Optional), Angular or ReactJS or VueJS. (Optional).",
   "main": "index.js",
   "scripts": {

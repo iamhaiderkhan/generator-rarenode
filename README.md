@@ -55,7 +55,7 @@ This generator is somewhat opinionated. You might be interested in knowing the f
 
 - If you choose sequelize
 
-    - update you mysql username & password in config/database.js
+    - update your mysql username & password in config/database.js
 
 ## Auth
  - Authentication is implemented by defualt.
