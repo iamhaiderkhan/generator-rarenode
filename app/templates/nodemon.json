@@ -1,0 +1,15 @@
+{
+    "verbose": true,
+    "delay": "1500",
+    "extension": [
+        "js",
+        "json"
+    ],
+    "ignore": [
+        "*.test.js",
+        "node_modules/*",
+        "public/*",
+        "dist/*",
+        "client/"
+    ]
+}

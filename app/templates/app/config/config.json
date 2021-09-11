@@ -1,0 +1,41 @@
+{
+    "specialization": {},
+    "middleware": {
+        "static": {
+            "module": {
+                "arguments": [
+                    "path:./../public"
+                ]
+            }
+        },
+        "router": {
+            "module": {
+                "arguments": [
+                    {
+                        "directory": "path:./controllers"
+                    }
+                ]
+            }
+        },
+        "authentication": {
+            "enabled": true,
+            "priority": 190,
+            "route": "\/api\/v1((?!$))((?!\/root\/))((?!\/users))*",
+            "module": {
+                "name": "path:./middlewares/auth"
+            }
+        },
+        "pagination": {
+            "enabled": true,
+            "priority": 200,
+            "route": "/api",
+            "module": {
+                "name": "path:./middlewares/pagination"
+            }
+        }
+    },
+    "app": {
+        "enums": "import:./enums.json",
+        "errors": "import:./errors.json"
+    }
+}

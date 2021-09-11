@@ -1,27 +1,28 @@
 {
-  "rules": {
-    "indent": [
-      2,
-      4
-    ],
-    "quotes": [
-      2,
-      "single"
-    ],
-    "linebreak-style": [
-      2,
-      "unix"
-    ],
-    "semi": [
-      2,
-      "always"
-    ],
-    "no-console": 1
-  },
-  "env": {
-    "node": true,
-    "browser": true,
-    "mocha": true
-  },
-  "extends": "eslint:recommended"
+    "env": {
+        "browser": true,
+        "es6": true,
+        "mocha": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "rules": {
+        "indent": [
+            2,
+            4
+        ],
+        "linebreak-style": 0,
+        "no-console": 0,
+        "no-unused-vars": 0,
+        "quotes": [
+            2,
+            "single"
+        ],
+        "require-atomic-updates": 0,
+        "semi": [
+            2,
+            "always"
+        ]
+    }
 }

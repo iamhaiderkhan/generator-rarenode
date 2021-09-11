@@ -1,20 +1,21 @@
 const nodeApp = 'app/';
 
-export const ENUMS = {
-  ANGULAR: 'Angular',
-  MONGOOSE: 'Mongoose',
-  NONE: 'None',
-  REACT: 'React',
-  SEQUELIZE: 'Sequelize',
+const Enums = {
+  angular: 'Angular',
+  mongoose: 'Mongoose',
+  none: 'None',
+  react: 'React',
+  sequelize: 'Sequelize',
+  vue: 'Vue',
 };
 
-export const DefaultPackageJsonScripts = {
+ const DefaultPackageJsonScripts = {
   "preinstall": "npm i -g concurrently nodemon",
   "server-start": "nodemon ./app/server.js | bunyan --output short --color",
   "start": "nodemon ./app/server.js | bunyan"
 }
 
-export const Paths = {
+ const Paths = {
   appConfig: `${nodeApp}config/`,
   appControllers: `${nodeApp}controllers/`,
   appLib: `${nodeApp}lib/`,
@@ -23,4 +24,10 @@ export const Paths = {
   mongoose: 'mongoose',
   nodeApp,
   sequelize: 'sequelize'
-};
+ };
+
+module.exports = {
+  Enums,
+  DefaultPackageJsonScripts,
+  Paths,
+ }
